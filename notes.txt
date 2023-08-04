@@ -1,0 +1,31 @@
+-backend engineer creates the API that deals with data manipulation at the database level. Now, whatever changes are fetched from the database or sent to the database are shown on the client side by the Frontend Engineer.
+
+- CRUD operation APIs=backend engineer
+
+-frontend engineer handles the changes that are intended on doing a particular event and backend engineer handles the API and database manipulation based on those events triggered by the client.
+
+- an application connected to the database make the changes persistent or permanent
+
+-Backend: server, database, API
+
+-route and API end point are same
+
+-route hit= API call = a function: task: logic building and database manipulation
+
+- add -g to install dependency in global state
+
+-step 1: create server
+
+-req: client sending details res: response sent from the server
+
+- can also use html syntax in res.send c that's response getting rendered
+
+-
+
+
+
+
+
+
+
+
