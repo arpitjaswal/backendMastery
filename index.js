@@ -1,6 +1,16 @@
-const http = require("http");
+// const http = require("http");
+//common JS version of importing modules
 
+//new
+//import f from "./features.js"
 
+//new ES module version
+import http from "http"
+
+//old
+// const f = require("./features")
+
+// f();
 const server  = http.createServer((req,res)=>{
     if(req.url==="/"){
         res.end("<h1>This is the home page</h1>")

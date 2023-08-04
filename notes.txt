@@ -20,7 +20,11 @@
 
 - can also use html syntax in res.send c that's response getting rendered
 
--
+-modules: built in, from the internet(npm): basically a function
+
+-export default works with whatever name but export {} has to match the names
+
+
 
 
 
