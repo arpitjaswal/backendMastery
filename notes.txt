@@ -24,6 +24,15 @@
 
 -export default works with whatever name but export {} has to match the names
 
+-can use os: check memory usage etc, fs: to read and write in files, http: to create server and send http method requests, path: to check path address, last directory name, 
+
+-http request methods: GET, POST, PUT, DELETE, PATCH etc.
+
+- we can create simple server with http module but that is difficult to handle syntactically, so, we use nodejs framework called expressjs
+
+-don't push nodemodules, use npm in
+
+-
 
 
 
