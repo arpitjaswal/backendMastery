@@ -43,3 +43,39 @@
 //     console.log("Server is listening");
 // })
 
+import express from "express";
+import fs from "fs";
+import path from "path"
+
+
+const app = express();
+
+app.get("/",(req,res)=>{
+    res.send("this is a server reply")
+})
+app.get("/not-found",(req,res)=>{
+    res.status(404).send("bhai, kuch nahi mila server pe");
+})
+
+app.get("/get-products",(req,res)=>{
+    res.json(
+        {
+            "name": "arpit",
+            email:"arpit@gmai;.com",
+            products: ["shampoo", "headphones", "phones"]
+        }
+    )
+})
+app.get("/render-html",(req,res)=>{
+    const pathname = path.resolve();
+    res.sendFile(path.join(pathname, "./index.html"))
+})
+
+app.get("/ejs-tutorial",(req,res)=>{
+    const pathname = path.resolve();
+    res.render();
+})
+
+app.listen(5000, ()=>{
+    console.log("Server is listening at 5000");
+});
