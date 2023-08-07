@@ -32,6 +32,10 @@
 
 -don't push nodemodules, use npm in
 
+-public folder is where all the static files are stored, mainly frontend code 
+
+-ejs makes it easier to write views using html and js syntax
+
 -
 
 

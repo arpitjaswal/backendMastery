@@ -50,30 +50,51 @@ import path from "path"
 
 const app = express();
 
+app.use(express.static(path.join(path.resolve(),"./public")));
+app.use(express.urlencoded({extended:true}));
+
 app.get("/",(req,res)=>{
-    res.send("this is a server reply")
+    const pathname = path.resolve();
+    res.render("index.ejs", {name: "arpit"});
 })
-app.get("/not-found",(req,res)=>{
-    res.status(404).send("bhai, kuch nahi mila server pe");
+// app.get("/not-found",(req,res)=>{
+//     res.status(404).send("bhai, kuch nahi mila server pe");
+// })
+
+// app.get("/get-products",(req,res)=>{
+//     res.json(
+//         {
+//             "name": "arpit",
+//             email:"arpit@gmai;.com",
+//             products: ["shampoo", "headphones", "phones"]
+//         }
+//     )
+// })
+// app.get("/render-html",(req,res)=>{
+//     const pathname = path.resolve();
+//     res.sendFile(path.join(pathname, "./index.html"))
+//})
+
+// app.get("/ejs-tutorial",(req,res)=>{
+    
+// })
+
+const users = [];
+
+app.get("/success",(req,res)=>{
+    res.render("success.ejs")
 })
 
-app.get("/get-products",(req,res)=>{
-    res.json(
-        {
-            "name": "arpit",
-            email:"arpit@gmai;.com",
-            products: ["shampoo", "headphones", "phones"]
-        }
-    )
-})
-app.get("/render-html",(req,res)=>{
-    const pathname = path.resolve();
-    res.sendFile(path.join(pathname, "./index.html"))
+app.get("/users",(req,res)=>{
+    res.json({
+        users
+    })
 })
 
-app.get("/ejs-tutorial",(req,res)=>{
-    const pathname = path.resolve();
-    res.render();
+app.post("/contact", (req,res)=>{
+    users.push({username: req.body.username, password: req.body.password});
+
+    res.redirect("/success")
 })
 
 app.listen(5000, ()=>{
