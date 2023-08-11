@@ -47,6 +47,11 @@ button {
     padding: 1rem 2rem;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 @media (max-width: 650px) {
     h1, label {
         font-size: 1.2rem;
